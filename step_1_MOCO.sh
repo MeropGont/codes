@@ -1,6 +1,6 @@
 #!/bin/bash
 # Motion Correction (SPM12)
-#
+# Try push
 # Define Input
 
 PATH_IN=/mnt/c/Users/apizz/Desktop/DCBT/Project/Data/Data/
