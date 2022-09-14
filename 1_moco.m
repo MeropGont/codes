@@ -1,6 +1,6 @@
 clear all;
-PATH_IN = "C:\Users\apizz\Desktop\DCBT\Project\Data\Data\BOLD"; 
-PATH_OUT = "C:\Users\apizz\Desktop\DCBT\Project\Data\Data\MOCO";
+PATH_IN = "C:\Users\Sadeg\Documents\GitHub\Data\BOLD"; 
+PATH_OUT = "C:\Users\Sadeg\Documents\GitHub\Data\MOCO";
 
 subj_list={'sub-01_ses-1_task-rest_acq-fullbrain_run-1_bold.nii', 'sub-02_ses-1_task-rest_acq-fullbrain_run-1_bold.nii'}; 
 nTR=300;
