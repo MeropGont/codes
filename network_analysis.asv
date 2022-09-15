@@ -104,24 +104,12 @@ end
 beh = load('C:\Users\apizz\Desktop\DCBT\Project\Data\Results\behavioral_subject_similarity.mat');
 
 FC_dist = {};
-label_names = {'DMN', 'Somatosensory awareness', 'Audiotory mental imagery/inner language', 'Visual mental'};
 
 for iterNet=1:4
     FC_dist{iterNet} = corrcoef(AllSbj{iterNet});
 
-    % Save matrices 
-    figure;
-    imagesc(FC_dist{iterNet});
-    colorbar;
-    clim([-1 1])
-    title(['FC similarity for ', label_names{iterNet}]);
-    xlabel('Subj', 'FontSize',12)
-    ylabel('Subj', 'FontSize',12)
-    saveas(gcf, fullfile(PATH_OUT, ['Sim_Net_FC', num2str(iterNet)]), 'png');
-
-
     % Compute last correlation BEH-netFC
-    temp = ones(10, 10);
+    temp = ones(n_nodes, n_nodes);
     utri = triu(temp, 1);
     idx = utri ~= 0;
 
@@ -130,12 +118,11 @@ for iterNet=1:4
     t_vect = t(:);
 
     % behav
-    b = beh.m(idx);
+    b = beh(idx);
     b_vect = b(:);
 
     % Compute correlation
     c_val = corr(t_vect, b_vect);
-    disp(c_val)
 
 end
 

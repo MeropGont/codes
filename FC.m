@@ -54,8 +54,10 @@ for iterSbj=1:Nsub
     colorbar;
     clim([-1 1])
     title(['Functional Connectivity (sub-' num2str(iterSbj) ')' ]);
-    saveas(gcf, fullfile(PATH_OUT, ['FC_mat_sub-', num2str(iterSbj)]), 'png');
+    xlabel('Nodes', 'FontSize',12)
+    ylabel('Nodes', 'FontSize',12)
 
+    saveas(gcf, fullfile(PATH_OUT, ['FC_mat_sub-', num2str(iterSbj)]), 'png');
     save(fullfile(PATH_OUT, strcat('FC_matrix_sbj', num2str(iterSbj))), 'FC_mat');
     save(fullfile(PATH_OUT, strcat('FC_struct_sbj', num2str(iterSbj))), 'FC_struct');
 

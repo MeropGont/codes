@@ -74,15 +74,12 @@ for iterSbj=1:Nsub
     vFC_conn(idx) = 0;
     
     % Scatterplot
-
     figure(4);
     c = corr(vFC_mat, vFC_conn);
     plot(vFC_mat);
     hold on
     plot(vFC_conn, 'r');
     title(['Correlation ' num2str(c)])
-    
-
 
     % pause;
 
